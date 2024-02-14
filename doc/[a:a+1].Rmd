@@ -1,0 +1,21 @@
+---
+title: "[a:a+1] in R"
+author: "Wu Yitong"
+date: "2024-02-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r [a:a+1] 1}
+l <- c(0.1, 0.2, 0.3, 0.4, 0.5)
+
+l[1:2 + 1] # == l[2:3]
+l[1 + 1:2] # == l[2:3]
+l[1 + 1:2 + 1] # == l[3:4]
+
+l[1:(2 + 1)] # == l[1:3]
+```
