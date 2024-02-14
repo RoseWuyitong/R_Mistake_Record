@@ -12,10 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 So in this case, `ifelse` can replace `if` with `else`.
 ```{r ifelse 1}
 cat("Using ifelse():", ifelse(TRUE, 1, 0))
-cat("\nUsing if () {} else {}:", if (TRUE) 1 else 0)
+cat("Using if () {} else {}:", if (TRUE) 1 else 0)
 ```
-But for a list, ifelse() can only return the first value.
+But for a list, `ifelse` can only return the first value.
 ```{r ifelse 2}
 cat("Using ifelse():", ifelse(TRUE, c(1, 2, 3), c(5, 6, 7)))
-cat("\nUsing if () {} else {}:", if (TRUE) c(1, 2, 3) else c(5, 6, 7))
+cat("Using if () {} else {}:", if (TRUE) c(1, 2, 3) else c(5, 6, 7))
 ```
