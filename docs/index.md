@@ -272,12 +272,10 @@ multiply_outer_2(2,3,4,5,6)
 The answer is YES, in this case, using above code would suddenly
 simplify the process.
 
-## Flexibility: Handling … augments
-
 But, what if you want more flexibility.
 
 ``` r
-customize_summary <- function(formula, model, ...) {
+some_glm <- function(formula, model, ...) {
   
   call <- match.call()
   # call: customize_summary(formula = mpg ~ cyl, model = lm_model, method = "bootstrap", mean = TRUE, median = TRUE)
@@ -314,7 +312,7 @@ customize_summary <- function(formula, model, ...) {
 }
 
 # Example usage
-customize_summary(y ~ x1+x2, lm_model, method = "bootstrap", mean = TRUE, median = TRUE, sd=FALSE)
+some_glm(y ~ x1+x2, lm_model, method = "bootstrap", mean = TRUE, median = TRUE, sd=FALSE)
 ```
 
     ## [1] "mean"   "median"
