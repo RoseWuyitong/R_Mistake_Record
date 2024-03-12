@@ -6,6 +6,25 @@ output: github_document
 ---
 
 
+# inverse matrix
+
+```{r matrix 1}
+m <- matrix(data=rnorm(9), nrow=3)
+m
+```
+
+Let's try `-1` first.
+
+```{r matrix 2}
+m^(-1)
+```
+This is right way.
+
+```{r matrix 3}
+solve(m)
+```
+
+
 # ifelse
 
 So in this case, `ifelse` can replace `if` + `else`.
